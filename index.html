@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ea" />
+    <title>Proposal</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="intro" id="intro" aria-hidden="true">
+      <div class="intro__glow"></div>
+      <div class="intro__heart">
+        <span></span>
+      </div>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 id="hero-title">Rehnuma</h1>
+          <p class="hero__copy">You've been in my mind for so long....</p>
+          <div class="hero__actions">
+            <button
+              class="icon-button"
+              id="musicToggle"
+              type="button"
+              aria-label="Toggle music"
+            >
+              <i data-lucide="music-2"></i>
+            </button>
+            <a class="scroll-cue" href="#book">
+              <span>I wish to say</span>
+              <i data-lucide="arrow-down"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero__halo" aria-hidden="true"></div>
+      </section>
+
+      <section class="book-section" id="book" aria-labelledby="book-title">
+        <div class="book-wrap">
+          <article class="book" id="bookCard">
+            <div class="book__cover page">
+              <div class="page__inner">
+                <div class="page__marker">
+                  <i data-lucide="sparkles"></i>
+                </div>
+                <p class="book__names">_____</p>
+                <h3>
+                  I've loved <strong>you</strong> far longer than you know
+                </h3>
+                <p>So tell me something... turn the page</p>
+                <button
+                  class="turn-button"
+                  id="turnPage"
+                  type="button"
+                  aria-label="Turn page"
+                >
+                  <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="book__inside page">
+              <div class="page__inner proposal-panel">
+                <button
+                  class="back-button"
+                  id="backPage"
+                  type="button"
+                  aria-label="Back"
+                >
+                  <i data-lucide="arrow-left"></i>
+                </button>
+                <p class="book__names">Do <strong>I</strong></p>
+                <h3>Have the priviladge to date <strong>you</strong>?</h3>
+                <div class="answer-row">
+                  <button
+                    class="answer-button answer-button--yes"
+                    data-answer="Yes"
+                    type="button"
+                  >
+                    <i data-lucide="heart"></i>
+                    <span>Yes</span>
+                  </button>
+                  <button
+                    class="answer-button answer-button--maybe"
+                    data-answer="Maybe"
+                    type="button"
+                  >
+                    <i data-lucide="smile"></i>
+                    <span>No! </span>
+                  </button>
+                </div>
+                <p class="answer-note" id="answerNote" aria-live="polite">
+                  Alright!
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      const proposalScript = document.createElement("script");
+      proposalScript.src = `script.js?v=${Date.now()}`;
+      document.body.appendChild(proposalScript);
+    </script>
+  </body>
+</html>
